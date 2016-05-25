@@ -1,0 +1,11 @@
+To Do
+[] Plan out program
+[] Design UI
+[] Design Database
+
+John
+[]
+
+Amir
+[]
+ 
