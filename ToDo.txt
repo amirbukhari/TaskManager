@@ -1,7 +1,14 @@
 To Do
+[] Make a sweet logo
 [] Plan out program
 [] Design UI
 [] Design Database
+	[]Accounts - username, password, email,
+	[]Projects - projectName, [Tasks], 
+	[]Tasks/Events
+
+
+
 
 John
 []
