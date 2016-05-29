@@ -1,0 +1,34 @@
+nav img
+{
+
+	width:15%;
+	margin-left:10px;
+}
+#top
+{
+	margin-top:4em;
+}
+
+#tasks
+{
+	margin-left:4em;
+
+}
+#profile 
+{
+	text-align:center;
+}
+#profile p
+{
+	margin-top:1em;
+}
+#myTasks
+{
+
+	background-color:#D8E6EB;
+	height:100%;
+}
+html,body,.container-fluid,#top
+{
+height:100%;
+}
