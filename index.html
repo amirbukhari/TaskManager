@@ -78,20 +78,67 @@
 					<p>Hi Amir!</p>
 				</div>
 				<div class="col-md-10" id="myTasks" >
-					<!--<table class="table">
-						<tr>
-							<th>Sunday</th>
-							<th>Monday</th>
-							<th>Tuesday</th>
-							<th>Wednesday</th>
-							<th>Thursday</th>
-							<th>Friday</th>
-							<th>Saturday</th>
-						</tr>
-					</table>-->
 					<h1>My Tasks</h1>
-					<div id="pendingTasks">
-							
+					<button type="button" class="btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+					</button>
+					
+					
+					
+					
+					
+					
+					<div class="row">
+						<div class="col-md-6" id="pendingTasks">
+								<h2>Pending Tasks</h2>
+								<label class="control control--checkbox">Wake Up at 6:30 AM
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Get Ready for Work
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Leave for Work
+								<input type="checkbox" />
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Slave at Work All Day
+								<input type="checkbox" />
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Leave Work and Drive Home
+								<input type="checkbox" />
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Eat Dinner
+								<input type="checkbox" />
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Watch Transformers
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+								</label>
+								
+								<label class="control control--checkbox">Set Alarm for 6:30 AM
+								<input type="checkbox" />
+								<div class="control__indicator"></div>
+								</label>
+						</div>
+						<div class="col-md-6" id="completedTasks">
+							<h2>Completed Tasks</h2>
 							<label class="control control--checkbox">Wake Up at 6:30 AM
 							<input type="checkbox" checked="checked"/>
 							<div class="control__indicator"></div>
@@ -131,6 +178,7 @@
 							<input type="checkbox" checked="checked"/>
 							<div class="control__indicator"></div>
 							</label>
+					</div>
 					</div>
 				</div>
 			</div>
