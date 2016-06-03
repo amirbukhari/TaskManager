@@ -7,6 +7,9 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         
+		    <!-- JQUERY -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">        
+     
         
 		<title>Task Manager</title>
 
@@ -18,10 +21,7 @@
         <link href="css/style.css" rel="stylesheet">
         
         
-        <!-- JQUERY -->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">        
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
 
 	</head>
 
@@ -51,16 +51,22 @@
             </div>
         </div>
         
-        <script>
-            $( document ).click(function() {
-              $( "#effect" ).effect( "drop", "slow" );
-            });
-        </script>
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
         <!-- Include all compiled plugins (below), or include individual files as needed -->
+		 <script src="js/jquery-ui.js"></script>
+		 <script>
+			$( document ).click(function() {
+			  $( "#effect" ).effect( "drop", "slow" );
+			});
+		</script>
         <script src="js/bootstrap.min.js"></script>
+		
+		        
+     
 
         
 	</body>
