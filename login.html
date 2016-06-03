@@ -25,7 +25,7 @@
 
 	</head>
 
-	<body id="loginpage">
+	<body>
 		
         <!-- LOGIN DIV -->
         <div class="container-fluid">
@@ -51,10 +51,17 @@
                 
                 <div class="col-md-4">
                     <form id="signup_effect" style="display:none">
-                        <div class="form-group loging_padding">
-                            <input type="text" class="form-control" name="username" id="username" placeholder="test"/>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="test2"/>
+                        <div class="form-group signup_padding">
+                            <input type="text" class="form-control" name="username" id="firstName" placeholder="First Name"/>
+                            <br />
+                            <input type="text" class="form-control" name="username" id="lastName" placeholder="Last Name"/>
+                            <br />
+                            <input type="text" class="form-control" name="password" id="email" placeholder="E-mail"/>
+                            <br />
+                            <input type="text" class="form-control" name="username" id="password" placeholder="Password"/>
                         </div>
+                        
+                        <input type="text" class="btn btn-success btn-lg" type="button" value="Create Account!"/>
                     </form>
                 </div>
             </div>
@@ -72,9 +79,9 @@
             $( "#button" ).click(function() {
                 //$( "#signup_effect" ).toggle();
                 $( "#login_effect" ).effect( "drop", {direction : "right"}, "slow", function() {
-                    $( "#signup_effect" ).toggle();
-                    $( "#signup_effect" ).fadeIn();
-                    //$( "#signup_effect" ).effect( "drop", {direction : "down"}, "slow");
+                    //$( "#signup_effect" ).toggle();
+                    //$( "#signup_effect" ).fadeIn();
+                    $( "#signup_effect" ).effect( "drop", {direction: "right", mode: "show"}, "slow");
                 })
             })
 
