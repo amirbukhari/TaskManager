@@ -27,15 +27,15 @@
 
 	<body>
 		
+        <!-- LOGIN DIV -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6" align="right">
-                    <img class="img-responsive vertical-center" style="width:75%" src="images/BlueAJLogoLarge.png">
+                    <img class="img-responsive vertical-center" style="width:85%" src="images/BlueAJLogoLarge.png">
                 </div>
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-3">
-                    <form id="effect">
+                
+                <div class="col-md-4">
+                    <form id="login_effect">
                         <div class="form-group login_padding">
                             
                             <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
@@ -51,17 +51,45 @@
             </div>
         </div>
         
-
+        <!-- SIGN UP DIV -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" align="right">
+                    <img class="img-responsive vertical-center" style="width:85%" src="images/BlueAJLogoLarge.png">
+                </div>
+                
+                <div class="col-md-4">
+                    <form id="signup_effect" style="display:none">
+                        <div class="form-group loging_padding">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+                            <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-		 <script src="js/jquery-ui.js"></script>
-		 <script>
-			$( "#button" ).click(function() {
-			  $( "#effect" ).effect( "drop", {direction : "right"}, "slow");
-			});
+        <script src="js/jquery-ui.js"></script>
+        <script>
+            /*
+            $( "#button" ).click(function() {
+                $( "#login_effect" ).effect( "drop", {direction : "right"}, "slow");
+                $( "#signup_effect" ).effect( "drop", {direction : "down"}, "slow");
+                
+                $( "#signup_effect" ).effect( "drop", {direction : "down"}, "slow");
+                document.getElementById("signup_effect").style.display="run-in";
+            });
+            */
+
+            $( "#button" ).click(function() {
+                $("#login_effect").effect( "drop", {direction : "right"}, "slow");
+                $("signup_effect").style.display="run=in";
+            })
 		</script>
         <script src="js/bootstrap.min.js"></script>
 		
