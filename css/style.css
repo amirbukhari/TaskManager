@@ -2,17 +2,19 @@ nav img {
 	width:15%;
 	margin-left:10px;
 }
-h2{
-	padding-left:2em;
-}
+
 #top {
 	margin-top:4em;
 }
-
-#tasks {
-	margin-left:4em;
+.tasks h2
+{
+ margin-left :2em;
+ color:green;
 }
-
+.tasks label
+{
+ margin-left :6em;
+}
 #profile {
 	text-align:center;
 }
