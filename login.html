@@ -30,12 +30,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6" align="right">
-                    <img id="effect" class="img-responsive vertical-center" style="width:75%" src="images/BlueAJLogoSmall.png">
+                    <img class="img-responsive vertical-center" style="width:75%" src="images/BlueAJLogoLarge.png">
                 </div>
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-3">
-                    <form>
+                    <form id="effect">
                         <div class="form-group login_padding">
                             
                             <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
@@ -44,7 +44,7 @@
                         </div>
                         
                         <button id="login" class="btn btn-success btn-lg" style="button">Login</button>
-                        <button class="btn btn-success btn-lg" style="button">Sign Up</button>
+                        <input id="button" class="btn btn-success btn-lg" type="button" value="Sign Up" />
                         
                     </form>
                 </div>
@@ -59,8 +59,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
 		 <script src="js/jquery-ui.js"></script>
 		 <script>
-			$( document ).click(function() {
-			  $( "#effect" ).effect( "drop", "slow" );
+			$( "#button" ).click(function() {
+			  $( "#effect" ).effect( "drop", {direction : "right"}, "slow");
 			});
 		</script>
         <script src="js/bootstrap.min.js"></script>
