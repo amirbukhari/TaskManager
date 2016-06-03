@@ -1,6 +1,13 @@
 <!doctype html>
 <html>
 	<head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        
+        
 		<title>Task Manager</title>
 
 		<meta charset="utf-8" />
@@ -9,26 +16,52 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/formControl.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        
+        
+        <!-- JQUERY -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">        
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 	</head>
 
 	<body>
 		
         <div class="container-fluid">
-            <div class="row" id="top">
-                <div class="col-md-6">
-                    <img class="img-responsive vertical-center" style="width:75%" src="images/BlueAJLogoSmall.png">
+            <div class="row">
+                <div class="col-md-6" align="right">
+                    <img id="effect" class="img-responsive vertical-center" style="width:75%" src="images/BlueAJLogoSmall.png">
                 </div>
-                <div class="col-md-6" >
-                    
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3">
+                    <form>
+                        <div class="form-group login_padding">
+                            
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+                            <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+
+                        </div>
+                        
+                        <button id="login" class="btn btn-success btn-lg" style="button">Login</button>
+                        <button class="btn btn-success btn-lg" style="button">Sign Up</button>
+                        
+                    </form>
                 </div>
             </div>
         </div>
+        
+        <script>
+            $( document ).click(function() {
+              $( "#effect" ).effect( "drop", "slow" );
+            });
+        </script>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+
         
 	</body>
 </html>
