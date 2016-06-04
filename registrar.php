@@ -1,6 +1,14 @@
 <?php
 
-    if ($_POST['submit']) {
+    session_start();
+
+    $link= mysqli_connect("localhost", "cl57-chojohn", "k-RzJ7XT^", "cl57-chojohn");
+
+    if ($_POST['submit'] == "Sign Up") {
+        
+        if (!$_POST['firstName']) $error.="<br />Please enter your first name";
+        
+        if (!$_POST['lastName']) $erorr.="<br />Please enter your last name";
         
         if (!$_POST['email']) $error.="<br />Please enter your email";
             else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) $error.="<br />Please enter a valid email address";
@@ -14,8 +22,6 @@
             }
         if ($error) echo "There were error(s) in your sign up details:" .$error;
         else {
-            
-            include("connection.php");
 
             $query="SELECT * FROM `users` WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'";
 
@@ -31,8 +37,28 @@
                 mysqli_query($link, $query);
                 
                 echo "You've been signed up!";
+                
+                $_SESSION['id']=mysqli_insert_id($link);
+                
+                print_r($_SESSION);
+                
+                // Redirect to logged in page
             }
         }
+    }
+
+    if ($_POST['submit'] == "Log In") {
+        
+        $query="SELECT * `users` WHERE email='".mysqli_real_escape_string($link, $_POST['loginEmail'])."' AND password='".md5(md5($_POST['loginEmail']).$_POST['loginPassword'])."' LIMIT 1";
+        
+        $result = mysqli_query($link, $query);
+        
+        $row = mysqli_fetch_array($result);
+        
+        echo "working";
+        
+        print_r($row);
+        
     }
     
 
@@ -77,15 +103,15 @@
                 </div>
                 
                 <div class="col-md-4">
-                    <form id="login_effect">
+                    <form id="login_effect" method="post">
                         <div class="form-group login_padding">
                             
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+                            <input type="email" class="form-control" name="loginEmail" id="loginEmail" placeholder="Email" value="<?php echo addslashes($_POST['email']); ?>"/>
+                            <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" value="<?php echo addslashes($_POST['password']); ?>"/>
 
                         </div>
                         
-                        <button id="login" class="btn btn-success btn-lg" style="button">Login</button>
+                        <input id="login" class="btn btn-success btn-lg" type="submit" name="submit" value="Log In" />
                         <input id="button" class="btn btn-success btn-lg" type="button" value="Sign Up" />
                         
                     </form>
@@ -98,12 +124,12 @@
                             <br />
                             <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name"/>
                             <br />
-                            <input type="text" class="form-control" name="email" id="email" placeholder="E-mail"/>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="<?php echo addslashes($_POST['email']); ?>"/>
                             <br />
-                            <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="<?php echo addslashes($_POST['password']); ?>"/>
                         </div>
                         
-                        <input type="text" class="btn btn-success btn-lg" type="submit" name="submit" value="Create Account!"/>
+                        <input class="btn btn-success btn-lg" type="submit" name="submit" value="Create Account!"/>
                     </form>
                 </div>
             </div>
