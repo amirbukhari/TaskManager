@@ -1,4 +1,4 @@
-<? include("register.php"); ?>
+<?php include("register.php"); ?>
 
 <!doctype html>
 <html>
@@ -26,14 +26,14 @@
 
 	<body>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row vertical-center-row">
                 <div class="col-md-6" align="right">
-                    <img class="img-responsive vertical-center" style="width:85%" src="images/BlueACLogoLarge.png">
+                    <img class="img-responsive"  src="images/BlueACLogoLarge.png">
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4 vertical-center">
                     <form id="login_effect" method="post">
-                        <div class="form-group login_padding">
+                        <div class="form-group">
                             
                             <input type="email" class="form-control" name="loginEmail" id="loginEmail" placeholder="Email" value="<?php echo addslashes($_POST['email']); ?>"/>
                             <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Password" value="<?php echo addslashes($_POST['password']); ?>"/>
@@ -52,11 +52,9 @@
                         ?>
                         
                     </form>
-                </div>
-                
-                <div class="col-md-4">
+					
                     <form id="signup_effect" style="display:none" method="post">
-                        <div class="form-group signup_padding">
+                        <div class="form-group">
                             <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name"/>
                             <br />
                             <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name"/>
