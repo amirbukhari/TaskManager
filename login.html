@@ -27,37 +27,21 @@
 
 	<body>
         
-        <?php
-
-            if ($_POST['submit']) {
-
-                if (!$_POST[`email`]) $error.=<br />"Please enter your email";
-                    else if (!filter_var($_POST[`email`], FILTER_VALIDATE_EMAIL)) $error.=<br />"Please enter a valid email address";
-
-                if (!$_POST['password']) $error.=<br />"Please enter your password";
-                    else {
-
-                        if (strlen($_POST['password']) < 8) $error.=<br />"Please enter a password with at least 8 characters";
-                        if (!preg_match('`[A-Z]`'), $_POST['password']) $error.=<br />"Please include at least one capital letter in your password";
-
-                    }
-                if ($error) echo "There were error(s) in your sign up details: .$error"
-            }
-
-        ?>
+       
 		
         <!-- LOGIN DIV -->
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6" align="right">
-                    <img class="img-responsive vertical-center" style="width:85%" src="images/BlueAJLogoLarge.png">
+            <div class="row vertical-center-row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="images/BlueAJLogoLarge.png">
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4 vertical-center">
                     <form id="login_effect">
-                        <div class="form-group login_padding">
+                        <div class="form-group">
                             
                             <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+							<br />
                             <input type="text" class="form-control" name="password" id="password" placeholder="Password"/>
 
                         </div>
@@ -66,9 +50,7 @@
                         <input id="button" class="btn btn-success btn-lg" type="button" value="Sign Up" />
                         
                     </form>
-                </div>
-                
-                <div class="col-md-4">
+               
                     <form id="signup_effect" style="display:none" method="post">
                         <div class="form-group signup_padding">
                             <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name"/>

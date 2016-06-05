@@ -24,30 +24,42 @@ nav img {
 {
  margin-left :6em;
 }
-#profile {
+#myTasksProfile {
 	text-align:center;
 }
 
-#profile p {
+#myTasksProfile p {
 	margin-top:1em;
 }
-
+#notifications
+{
+	background-color:#F8E6EB;
+}
+#notifications h3
+{
+	text-decoration: underline;
+}
 #myTasks{
 	background-color:#D8E6EB;
 	height:100%;
 }
 
-html,body,.container-fluid,#top {
-    height:100%;
-}
+
 
 .vertical-center{
-    position: relative;
+    position: fixed;
     top: 50%;
-    transform: translateY(30%);
+	left:50%;
+	-webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	
 }
-
-.login_padding {
-    padding-top: 100%;
-        
+.vertical-center-row{
+    position: absolute;
+    top: 50%;
+	-webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	
 }
