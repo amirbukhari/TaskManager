@@ -37,8 +37,9 @@ nav img {
 }
 #notifications
 {
-	
-	background-color:#F8E6EB;
+	height:400px;
+	overflow:scroll;
+	background-color:#e6e7eb;
 }
 #notifications h3
 {
@@ -50,8 +51,20 @@ nav img {
 {
 	border-top: 2px solid lightgrey;
 }
+#notifications img
+{
+	width:20%;
+	margin:0 0.2em;
+	float:left;
+}
+#notifications p
+{
+	display:inline;
+	margin-right:0.2em;
+}
 .notificationAddedTask
 {
+	padding:1em 0.5em;
 	
 	border-bottom: 2px solid lightgrey;
 }

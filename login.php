@@ -28,7 +28,7 @@
         <div class="container-fluid">
             <div class="row vertical-center-row">
                 <div class="col-md-6" align="right">
-                    <img class="img-responsive"  src="images/BlueACLogoLarge.png">
+                    <img class="img-responsive"  src="images/BlueACLogoLarge3.png">
                 </div>
                 
                 <div class="col-md-4 vertical-center">
