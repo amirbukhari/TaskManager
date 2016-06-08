@@ -55,6 +55,22 @@ nav img {
 	border-top: 2px solid lightgrey;
 }
 
+.friendrow
+{
+margin-top:2em;
+
+}
+.friend img
+{
+	width:30%;
+	vertical-align:middle;
+	display:inline;
+}
+.friend p
+{
+	display:inline;
+}
+
 .notificationAddedTask
 {
 	padding:1em 0.5em;
