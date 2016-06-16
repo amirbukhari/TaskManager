@@ -3,8 +3,9 @@
     session_start();
 
     include("connection.php");
-		
-    if ($_POST['submit'] == "Create Account!") {
+	$error=null;
+	if(isset($_POST['submit'])){
+		    if ($_POST['submit'] == "Create Account!") {
         
         if (!$_POST['firstName']) $error.="<br />Please enter your first name";
         
@@ -69,6 +70,6 @@
         }
         
     }
-    
+    }
 
 ?>
