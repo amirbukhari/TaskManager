@@ -21,6 +21,7 @@ $doc ="<!doctype html>
         <link href='css/formControl.css' rel='stylesheet'>
         <link href='css/style.css' rel='stylesheet'>
 
+	
 	</head>
 
 	<body>
@@ -30,8 +31,17 @@ $doc ="<!doctype html>
                     <img class='img-responsive'  src='images/BlueACLogoLarge3.png'>
                 </div>
                 
-                <div class='col-md-4 vertical-center'>
-                    <form id='login_effect' method='post'>
+                <div class='col-md-4 vertical-center'>";
+				if($test==true){
+					
+					  $doc .=  "<form id='login_effect' style='display:none' method='post'>";
+					}
+					else
+					{
+						$doc .= "<form id='login_effect' method='post'>";
+					}
+                    
+                      $doc .= "
                         <div class='form-group'>
                             
                             <input type='email' class='form-control' name='loginEmail' id='loginEmail' placeholder='Email' value='"; 
@@ -54,16 +64,20 @@ $doc ="<!doctype html>
                         
                        ";
                     
-                            if ($error) {
-                                $doc .= "<div class='alert alert-danger'>'".addslashes($error).'</div>';
-                            }
+                          
 
                    
                         
-                    $doc .=   " </form>
-					
-                    <form id='signup_effect' style='display:none' method='post'>
-                        <div class='form-group'>
+                    $doc .=   " </form>";
+					if($test==true){
+					  $doc .=  "<form id='signup_effect' method='post'>";
+					}
+					else
+					{
+						$doc .= "<form id='signup_effect' style='display:none' method='post'>";
+					}
+                    
+                      $doc .= "  <div class='form-group'>
                             <input type='text' class='form-control' name='firstName' id='firstName' placeholder='First Name'/>
                             <br />
                             <input type='text' class='form-control' name='lastName' id='lastName' placeholder='Last Name'/>
@@ -84,13 +98,16 @@ $doc ="<!doctype html>
                         </div>
                         
                         <input class='btn btn-success btn-lg' type='submit' name='submit' value='Create Account!'/>
-                    </form>
-                </div>
+                    </form>";
+					  if ($error) {
+                                $doc .= "<div class='alert alert-danger'>'".addslashes($error).'</div>';
+                            }
+                 $doc .=" </div>
             </div>
         </div>
         
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
 	
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -109,7 +126,8 @@ $doc ="<!doctype html>
 
 		</script>
         <script src='js/bootstrap.min.js'></script>
-        
+		
+        	
 	</body>
 </html>";
 echo $doc;

@@ -54,7 +54,12 @@ nav img {
 {
 	border-top: 2px solid lightgrey;
 }
-
+#profile
+{
+	padding-top:5%;
+	width:80%;
+	margin:0 auto;
+}
 .friendrow
 {
 margin-top:2em;
