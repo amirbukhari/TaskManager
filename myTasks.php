@@ -1,4 +1,5 @@
-<!doctype html>
+<?php 
+	$doc ="<!doctype html>
 <html>
 	<head>
 		<title>Task Manager</title>
@@ -205,5 +206,7 @@
 		
 		
 	</body>
-</html>
+</html>";
 
+echo $doc;
+?>
